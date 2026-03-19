@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Users = () => {
+const NotFound = () => {
   return (
     <div>
-      <h1>Users</h1>
+      Not Found
     </div>
   )
 }
 
-export default Users
+export default NotFound
