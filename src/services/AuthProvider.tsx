@@ -181,6 +181,22 @@ const MsalAuthProviderInner: React.FC<{ children: React.ReactNode }> = ({ childr
     profile: authState.account,
   };
 
+  if (authState.loading) {
+    return (
+      <div
+        className="min-h-screen flex items-center justify-center"
+        style={{
+          background: "linear-gradient(to bottom, #09162C, #0F2C50)",
+        }}
+      >
+        <div className="flex flex-col items-center gap-4">
+          <div className="h-10 w-10 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+          <span className="text-slate-300 font-medium">Initializing...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <MsalAuthContext.Provider value={contextValue}>
       {children}

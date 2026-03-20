@@ -84,15 +84,15 @@ const environment = determineEnvironment();
  */
 const environmentSettings = {
   localhost: {
-    clientId: 'bf653627-7f06-4d86-b3c5-adc92ea747cf',
-    authority: 'https://login.microsoftonline.com/ff93404f-c1e7-43e5-ab53-a9b9d85c1f98',
-    apiScope: 'api://ChargerFleet-Core-Gtw-Dev/User-Impersonation',
+    clientId: (import.meta as any).env.VITE_AZURE_CLIENT_ID || 'bf653627-7f06-4d86-b3c5-adc92ea747cf',
+    authority: `https://login.microsoftonline.com/${(import.meta as any).env.VITE_AZURE_TENANT_ID || 'ff93404f-c1e7-43e5-ab53-a9b9d85c1f98'}`,
+    apiScope: (import.meta as any).env.VITE_AZURE_SCOPE?.split(' ')[0] || 'api://ChargerFleet-Core-Gtw-Dev/User-Impersonation',
     apiBaseUrl: 'https://globalapi.chargerfleetdev.cloud',
   },
   development: {
-    clientId: 'bf653627-7f06-4d86-b3c5-adc92ea747cf',
-    authority: 'https://login.microsoftonline.com/ff93404f-c1e7-43e5-ab53-a9b9d85c1f98',
-    apiScope: 'api://ChargerFleet-Core-Gtw-Dev/User-Impersonation',
+    clientId: (import.meta as any).env.VITE_AZURE_CLIENT_ID || 'bf653627-7f06-4d86-b3c5-adc92ea747cf',
+    authority: `https://login.microsoftonline.com/${(import.meta as any).env.VITE_AZURE_TENANT_ID || 'ff93404f-c1e7-43e5-ab53-a9b9d85c1f98'}`,
+    apiScope: (import.meta as any).env.VITE_AZURE_SCOPE?.split(' ')[0] || 'api://ChargerFleet-Core-Gtw-Dev/User-Impersonation',
     apiBaseUrl: 'https://globalapi.chargerfleetdev.cloud',
   },
   production: {
