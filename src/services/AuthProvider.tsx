@@ -45,12 +45,12 @@ const MsalAuthProviderInner: React.FC<{ children: React.ReactNode }> = ({ childr
       setIsAuthenticated(!!result.account);
 
       if (result.account) {
-        setPendingTokenRefresh(true);
+        setPendingTokenRefresh(false); // No need to wait since we have a token
         setAuthState({
           isAuthenticated: true,
           account: result.account,
           user: result.account as any,
-          loading: true,
+          loading: false,
           error: null,
         });
       } else {
