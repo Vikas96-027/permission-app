@@ -97,9 +97,11 @@ const MsalAuthProviderInner: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [instance, setAccount, setIsAuthenticated]);
 
   const signInWithMsal = useCallback(async () => {
+    console.log("sign in with msal");
     try {
       setAuthState((prev) => ({ ...prev, loading: true, error: null }));
       await msalAuthService.loginRedirect();
+      console.log("msal auth service", msalAuthService)
     } catch (error) {
       console.error("Sign in failed:", error);
 

@@ -14,6 +14,7 @@ export const useAuth = () => {
   };
 
   const getToken = async () => {
+    console.log("useAuth getToken", accounts);
     if (!isAuthenticated) return null;
     const response = await msalInstance.acquireTokenSilent({
       scopes: loginRequest.scopes,
