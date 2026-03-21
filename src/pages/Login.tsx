@@ -51,7 +51,6 @@ export default function LoginPage({
   }
 
   const handleLogin = async () => {
-    console.log("handleLogin");
     setLoading(true);
     try {
       await signInWithMsal();
