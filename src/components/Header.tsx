@@ -1,10 +1,10 @@
-import { Bell, Search, Settings } from "lucide-react";
+import { Bell, Search, Settings, Shield } from "lucide-react";
 
 const Header = () => {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 flex h-11 items-center justify-between bg-[#004a94] px-4 text-white">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-bold">LO</span>
+        <span className="text-sm font-bold">{<Shield />}</span>
         <span className="text-sm font-semibold">PermissionHub</span>
         <span className="text-[10px] tracking-wide text-white/70">
           CONFIGURATOR

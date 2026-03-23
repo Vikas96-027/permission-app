@@ -8,6 +8,7 @@ import {
   LayoutDashboard,
   MapPin,
   Shield,
+  ShieldCheck,
   Users,
 } from "lucide-react";
 
@@ -17,6 +18,7 @@ const managementItems = [
   { label: "Groups", to: "/groups", icon: Users },
   { label: "Roles", to: "/roles", icon: Shield },
   { label: "Heirarchy", to: "/heirarchy", icon: GitBranch },
+  { label: "Permissions", to: "/permissions", icon: ShieldCheck },
 ];
 
 const configurationItems = [

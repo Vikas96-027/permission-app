@@ -8,6 +8,7 @@ import Resources from "./pages/Resources";
 import Locations from "./pages/Locations";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/Login";
+import Permissions from "./pages/Permissions";
 import PrivateRoute from "./components/auth/PrivateRoute";
 import AppLayout from "./components/AppLayout";
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/groups" element={<Groups />} />
         <Route path="/roles" element={<Roles />} />
         <Route path="/heirarchy" element={<Heirarchy />} />
+        <Route path="/permissions" element={<Permissions />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/locations" element={<Locations />} />
       </Route>
